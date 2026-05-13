@@ -1,0 +1,28 @@
+# ============================================================
+# Python packages this API-only chatbot needs.
+# Install with:  pip install -r requirements.txt
+# ============================================================
+
+# --- Core LLM + embeddings ---
+# Lets us talk to OpenAI (GPT-4o mini + the embedding model).
+openai>=1.30.0
+
+# --- Local vector database (no signup, no cloud) ---
+# Stores chunks of text as vectors so we can search by meaning.
+chromadb>=0.5.0
+
+# --- Document parsing ---
+# pypdf: read PDFs.  python-docx: read Word documents.
+pypdf>=4.0.0
+python-docx>=1.1.0
+
+# --- Reading .env files (so your secret API key lives outside the code) ---
+python-dotenv>=1.0.0
+
+# --- The REST API backend ---
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.6.0
+
+# --- Useful utilities ---
+tqdm>=4.66.0

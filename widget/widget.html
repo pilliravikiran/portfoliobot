@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RaviBot widget — demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#f0f4ff 0%,#f5eeff 50%,#ffe8f0 100%);
+    margin: 0; padding: 60px 24px; min-height: 100vh;
+    color: #1d1d1f;
+  }
+  .demo {
+    max-width: 720px; margin: 0 auto;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(14px);
+    border-radius: 24px; padding: 40px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+  h1 {
+    margin: 0 0 12px; font-size: 30px;
+    background: linear-gradient(135deg,#0071e3,#5856d6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  p { line-height: 1.6; color: #424245; }
+  code {
+    background: #f5f5f7; padding: 2px 6px; border-radius: 6px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+  <div class="demo">
+    <h1>RaviBot widget demo</h1>
+    <p>
+      This is a standalone test page. Look in the bottom-right corner —
+      the blue/purple chat bubble is the widget. Click it to chat.
+    </p>
+    <p>
+      To embed the widget in <code>Portfolio/index.html</code>, copy the
+      single &lt;script&gt; tag from <code>widget.js</code> and drop it
+      just before the closing <code>&lt;/body&gt;</code> tag of your page.
+      Make sure <code>api.py</code> is running:
+      <code>uvicorn api:app --port 8000</code>.
+    </p>
+    <p>
+      You can change the colours, position, and API endpoint at the top
+      of <code>widget.js</code>.
+    </p>
+  </div>
+
+  <!-- The widget itself. One line is all you need on any page. -->
+  <script src="widget.js" defer></script>
+</body>
+</html>
